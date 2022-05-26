@@ -24,9 +24,7 @@ for i in range(0, len(imageset)):
 
   # grayscale
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-  # ret, thresh1 = cv2.threshold(gray, 130, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-  # ret, thresh2 = cv2.threshold(gray, 160, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-  # ret, thresh3 = cv2.threshold(gray, 190, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+  # ret, thresh1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
   # ret, threshNoOTSU1 = cv2.threshold(gray, 130, 255, cv2.THRESH_BINARY_INV)
   ret, threshNoOTSU2 = cv2.threshold(gray, 160, 255, cv2.THRESH_BINARY_INV)
   # ret, threshNoOTSU3 = cv2.threshold(gray, 190, 255, cv2.THRESH_BINARY_INV)
@@ -35,7 +33,7 @@ for i in range(0, len(imageset)):
   # Also notice that without OTSU will perform relatively better
 
   kernel = np.ones((5, 5), np.uint8)
-  # dilation = cv2.dilate(thresh2, kernel, iterations=1)
+  # dilation = cv2.dilate(thresh1, kernel, iterations=1)
   dilation2 = cv2.dilate(threshNoOTSU2, kernel, iterations=1)
 
   # Select 5 x 5 Mask for Dilation
@@ -79,9 +77,7 @@ for i in range(0, len(imageset)):
         
   # cv2.imshow('thresh 1', thresh1)
   # cv2.imshow('thresh NO OTSU', threshNoOTSU1)
-  # cv2.imshow('thresh 2', thresh2)
   # cv2.imshow('thresh NO OTSU 2', threshNoOTSU2)
-  # cv2.imshow('thresh 3', thresh3)
   # cv2.imshow('thresh NO OTSU 3', threshNoOTSU3)
   # cv2.imshow('Dilation', dilation)
   # cv2.imshow('Dilation2', dilation2)
