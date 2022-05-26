@@ -1,4 +1,4 @@
-import cv2 as cv
+import cv2
 import numpy as np
 
 imageset = ["test_images/image1.jpg", "test_images/image2.jpg", "test_images/image3.jpg",
@@ -10,13 +10,13 @@ imageset = ["test_images/image1.jpg", "test_images/image2.jpg", "test_images/ima
             "test_images/image19.jpg", "test_images/image20.jpg"]
 
 for i in range(0, len(imageset)):   
-    img_rgb = cv.imread(imageset[i])
-    img_gray = cv.cvtColor(img_rgb, cv.COLOR_BGR2GRAY)
-    template = cv.imread('finderPattern.jpg',0)
+    img_rgb = cv2.imread(imageset[i])
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+    template = cv2.imread('finderPattern.jpg',0)
     w, h = template.shape[::-1]
-    res = cv.matchTemplate(img_gray,template,cv.TM_CCOEFF_NORMED)
+    res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
     threshold = 0.4
     loc = np.where( res >= threshold)
     for pt in zip(*loc[::-1]):
-        cv.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
-    cv.imwrite('matchOutput/res{}.jpg'.format(i),img_rgb)
+        cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
+    cv2.imwrite('matchOutput/res{}.jpg'.format(i),img_rgb)
