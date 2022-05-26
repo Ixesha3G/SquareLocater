@@ -19,4 +19,4 @@ for i in range(0, len(imageset)):
     loc = np.where( res >= threshold)
     for pt in zip(*loc[::-1]):
         cv.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
-    cv.imwrite('match/res{}.jpg'.format(i),img_rgb)
+    cv.imwrite('matchOutput/res{}.jpg'.format(i),img_rgb)
