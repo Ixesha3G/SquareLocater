@@ -75,7 +75,7 @@ for i in range(0, len(imageset)):
       # Since area less than 4000 is lee likely to contain QR code
       # cv2.rectangle(image, (xmin, ymin), (xmin + width, ymin + height), (0,255,0), 3)
       QR = image[ymin-5:ymin+height+5, xmin-5:xmin+width+5]
-      cv2.imwrite('outputV1/QR{}.jpg'.format(i), QR)
+      cv2.imwrite('squareOutput/QR{}.jpg'.format(i), QR)
         
   # cv2.imshow('thresh 1', thresh1)
   # cv2.imshow('thresh NO OTSU', threshNoOTSU1)
