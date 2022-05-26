@@ -4,13 +4,13 @@ from turtle import right
 import cv2
 import numpy as np
 
-imageset = ["output/QR0.jpg", "output/QR1.jpg", "output/QR2.jpg",
-            "output/QR3.jpg", "output/QR4.jpg", "output/QR5.jpg",
-            "output/QR6.jpg", "output/QR7.jpg", "output/QR8.jpg",
-            "output/QR9.jpg", "output/QR10.jpg", "output/QR11.jpg",
-            "output/QR12.jpg", "output/QR13.jpg", "output/QR14.jpg",
-            "output/QR15.jpg", "output/QR16.jpg", "output/QR17.jpg",
-            "output/QR18.jpg", "output/QR19.jpg"]
+imageset = ["squareOutput/QR0.jpg", "squareOutput/QR1.jpg", "squareOutput/QR2.jpg",
+            "squareOutput/QR3.jpg", "squareOutput/QR4.jpg", "squareOutput/QR5.jpg",
+            "squareOutput/QR6.jpg", "squareOutput/QR7.jpg", "squareOutput/QR8.jpg",
+            "squareOutput/QR9.jpg", "squareOutput/QR10.jpg", "squareOutput/QR11.jpg",
+            "squareOutput/QR12.jpg", "squareOutput/QR13.jpg", "squareOutput/QR14.jpg",
+            "squareOutput/QR15.jpg", "squareOutput/QR16.jpg", "squareOutput/QR17.jpg",
+            "squareOutput/QR18.jpg", "squareOutput/QR19.jpg"]
 
 def line_intersection(line1, line2):
     xdiff = (line1[0][0] - line1[1][0], line2[0][0] - line2[1][0])
