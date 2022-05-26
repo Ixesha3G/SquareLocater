@@ -4,7 +4,10 @@ import numpy as np
 imageset = ["test_images/image1.jpg", "test_images/image2.jpg", "test_images/image3.jpg",
             "test_images/image4.jpg", "test_images/image5.jpg", "test_images/image6.jpg",
             "test_images/image7.jpg", "test_images/image8.jpg", "test_images/image9.jpg",
-            "test_images/image10.jpg", "test_images/image11.jpg", "test_images/image12.jpg"]
+            "test_images/image10.jpg", "test_images/image11.jpg", "test_images/image12.jpg",
+            "test_images/image13.jpg", "test_images/image14.jpg", "test_images/image15.jpg",
+            "test_images/image16.jpg", "test_images/image17.jpg", "test_images/image18.jpg",
+            "test_images/image19.jpg", "test_images/image20.jpg"]
 
 for i in range(0, len(imageset)):
 
@@ -72,7 +75,7 @@ for i in range(0, len(imageset)):
       # Since area less than 4000 is lee likely to contain QR code
       # cv2.rectangle(image, (xmin, ymin), (xmin + width, ymin + height), (0,255,0), 3)
       QR = image[ymin-5:ymin+height+5, xmin-5:xmin+width+5]
-      cv2.imwrite('output/QR{}.jpg'.format(i), QR)
+      cv2.imwrite('outputV1/QR{}.jpg'.format(i), QR)
         
   # cv2.imshow('thresh 1', thresh1)
   # cv2.imshow('thresh NO OTSU', threshNoOTSU1)
