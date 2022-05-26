@@ -7,7 +7,10 @@ import numpy as np
 imageset = ["output/QR0.jpg", "output/QR1.jpg", "output/QR2.jpg",
             "output/QR3.jpg", "output/QR4.jpg", "output/QR5.jpg",
             "output/QR6.jpg", "output/QR7.jpg", "output/QR8.jpg",
-            "output/QR9.jpg", "output/QR10.jpg", "output/QR11.jpg"]
+            "output/QR9.jpg", "output/QR10.jpg", "output/QR11.jpg",
+            "output/QR12.jpg", "output/QR13.jpg", "output/QR14.jpg",
+            "output/QR15.jpg", "output/QR16.jpg", "output/QR17.jpg",
+            "output/QR18.jpg", "output/QR19.jpg"]
 
 def line_intersection(line1, line2):
     xdiff = (line1[0][0] - line1[1][0], line2[0][0] - line2[1][0])
